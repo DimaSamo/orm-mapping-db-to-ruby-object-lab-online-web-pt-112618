@@ -46,11 +46,7 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade)
   end
 
-  def self.all_students_in_grade_9
-    self.all.map do |student|
-      student if student.grade == 9
-    end.compact
-  end
+
 
   def self.create_table
     sql = <<-SQL
