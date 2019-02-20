@@ -48,7 +48,7 @@ class Student
 
   def self.all_students_in_grade_9
     array = self.all.map do |student|
-      student
+      student if student.grade == "9"
     end
     binding.pry
   end
