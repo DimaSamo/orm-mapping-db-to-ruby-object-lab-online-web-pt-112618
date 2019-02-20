@@ -47,7 +47,7 @@ class Student
   end
 
   def self.all_students_in_grade_9
-    self.all.map do |student|
+    array = self.all.map do |student|
       student if student.grade == "9"
       binding.pry
     end.compact
