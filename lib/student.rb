@@ -50,7 +50,7 @@ class Student
     array = self.all.map do |student|
       student if student.grade == "9"
       binding.pry
-    end.compact
+    end
     binding.pry
   end
 
