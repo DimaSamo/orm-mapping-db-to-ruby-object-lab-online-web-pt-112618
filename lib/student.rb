@@ -50,7 +50,7 @@ class Student
     array = self.all.map do |student|
       student if student.grade == "9"
     end.compact
-    binding.pry
+    student
   end
 
   def self.create_table
