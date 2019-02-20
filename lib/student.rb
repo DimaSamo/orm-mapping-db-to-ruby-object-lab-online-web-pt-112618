@@ -20,8 +20,9 @@ class Student
     SQL
     rows = DB[:conn].execute(sql)
     rows.each do |row|
-      self.new_from_db(row)
+      @@all.push(self.new_from_db(row))
     end
+    @@all
   end
 
   def self.find_by_name(name)
