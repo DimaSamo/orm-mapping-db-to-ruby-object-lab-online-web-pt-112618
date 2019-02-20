@@ -49,7 +49,6 @@ class Student
   def self.all_students_in_grade_9
     array = self.all.map do |student|
       student
-      binding.pry
     end
     binding.pry
   end
