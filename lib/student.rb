@@ -48,7 +48,7 @@ class Student
 
   def self.all_students_in_grade_9
     @@all.map do |student|
-      student if student.grade == 9
+      student if student.grade == "9th"
     end.compact
   end
 
