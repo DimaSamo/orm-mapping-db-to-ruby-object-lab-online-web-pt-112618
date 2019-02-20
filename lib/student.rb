@@ -47,10 +47,14 @@ class Student
   end
 
   def self.all_students_in_grade_9
-    array = @@all.map do |student|
-      student if student.grade == "9"
-    end.compact
-    array
+    sql = <<-SQL
+   SELECT *
+   FROM students
+   WHERE students.grade = 9
+   SQL
+   DB[:conn].execute(sql).collect do |row|
+     self.new_from_db(row)
+   end
   end
 
   def self.create_table
