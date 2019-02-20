@@ -51,6 +51,7 @@ class Student
       student if student.grade == "9"
       binding.pry
     end.compact
+    binding.pry
   end
 
   def self.create_table
